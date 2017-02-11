@@ -17,12 +17,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addLocation: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         coreLocationManager.delegate = self
-        locationManager = LocationManager.sharedInstance
         let authorizationCode = CLLocationManager.authorizationStatus()
         
         if authorizationCode == CLAuthorizationStatus.notDetermined && coreLocationManager.responds(to: #selector(CLLocationManager.requestAlwaysAuthorization)) || coreLocationManager.responds(to: #selector(CLLocationManager.requestWhenInUseAuthorization)) {
@@ -31,19 +29,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 print("No description provider")
             }
-        } else {
-            getLocation()
         }
+        self.coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        self.coreLocationManager.startUpdatingLocation()
+        self.mapView.showsUserLocation = true
         
     }
     
-    func getLocation(){
-        locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) in
-            self.displayLocation(location: CLLocation(latitude: latitude, longitude: longitude))
-        }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let center = CLLocationCoordinate2DMake(location!.coordinate.latitude, location!.coordinate.longitude)
+        let region = MKCoordinateRegionMake(center, MKCoordinateSpanMake(0.05, 0.05))
+        
+        self.mapView.setRegion(region, animated: true)
+        
+        //addLocationPoint(location: locations.last!)
+        
+        self.coreLocationManager.stopUpdatingLocation()
     }
     
-    func displayLocation(location:CLLocation){
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error : " + error.localizedDescription)
+    }
+    
+    func addLocationPoint(location:CLLocation){
         mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), span: MKCoordinateSpanMake(0.05, 0.05)), animated: true)
         
         let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -54,12 +64,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.showAnnotations([annotation], animated: true)
         
         
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status != CLAuthorizationStatus.notDetermined || status != CLAuthorizationStatus.denied || status != CLAuthorizationStatus.restricted{
-            getLocation()
-        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F1115AC61E4F969500297951 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1115AC51E4F969500297951 /* LocationManager.swift */; };
+		F1115AC81E4FC4A000297951 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1115AC71E4FC4A000297951 /* CoreLocation.framework */; };
 		F19606061E4F87B4000E4FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606051E4F87B4000E4FCF /* AppDelegate.swift */; };
 		F19606081E4F87B4000E4FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606071E4F87B4000E4FCF /* ViewController.swift */; };
 		F196060B1E4F87B4000E4FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19606091E4F87B4000E4FCF /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		F1115AC51E4F969500297951 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F1115AC71E4FC4A000297951 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F19606021E4F87B4000E4FCF /* WhereIsMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19606051E4F87B4000E4FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19606071E4F87B4000E4FCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1115AC81E4FC4A000297951 /* CoreLocation.framework in Frameworks */,
 				F19606381E4F8ED5000E4FCF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,7 @@
 		F19606361E4F8ED5000E4FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1115AC71E4FC4A000297951 /* CoreLocation.framework */,
 				F19606371E4F8ED5000E4FCF /* MapKit.framework */,
 			);
 			name = Frameworks;

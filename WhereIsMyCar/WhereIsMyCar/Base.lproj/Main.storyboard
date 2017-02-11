@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D1F-rl-zKv">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kaB-Si-wgD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
@@ -40,12 +40,12 @@
                     </view>
                     <connections>
                         <outlet property="addLocation" destination="3XO-Gr-zWq" id="rni-9h-DOV"/>
-                        <outlet property="mapView" destination="D1F-rl-zKv" id="kJN-yX-G7i"/>
+                        <outlet property="mapView" destination="kaB-Si-wgD" id="Ds5-LC-7bn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="76"/>
+            <point key="canvasLocation" x="-1178" y="-15"/>
         </scene>
     </scenes>
 </document>
