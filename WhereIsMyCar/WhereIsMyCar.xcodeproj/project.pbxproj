@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1115AC61E4F969500297951 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1115AC51E4F969500297951 /* LocationManager.swift */; };
 		F1115AC81E4FC4A000297951 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1115AC71E4FC4A000297951 /* CoreLocation.framework */; };
 		F19606061E4F87B4000E4FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606051E4F87B4000E4FCF /* AppDelegate.swift */; };
-		F19606081E4F87B4000E4FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606071E4F87B4000E4FCF /* ViewController.swift */; };
+		F19606081E4F87B4000E4FCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606071E4F87B4000E4FCF /* MainViewController.swift */; };
 		F196060B1E4F87B4000E4FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19606091E4F87B4000E4FCF /* Main.storyboard */; };
 		F196060E1E4F87B4000E4FCF /* WhereIsMyCar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F196060C1E4F87B4000E4FCF /* WhereIsMyCar.xcdatamodeld */; };
 		F19606101E4F87B4000E4FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F196060F1E4F87B4000E4FCF /* Assets.xcassets */; };
@@ -18,6 +17,7 @@
 		F196061E1E4F87B4000E4FCF /* WhereIsMyCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196061D1E4F87B4000E4FCF /* WhereIsMyCarTests.swift */; };
 		F19606291E4F87B4000E4FCF /* WhereIsMyCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606281E4F87B4000E4FCF /* WhereIsMyCarUITests.swift */; };
 		F19606381E4F8ED5000E4FCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19606371E4F8ED5000E4FCF /* MapKit.framework */; };
+		F1E8E5D71E50D9A00059510D /* AddPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8E5D61E50D9A00059510D /* AddPositionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F1115AC51E4F969500297951 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F1115AC71E4FC4A000297951 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F19606021E4F87B4000E4FCF /* WhereIsMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19606051E4F87B4000E4FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F19606071E4F87B4000E4FCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F19606071E4F87B4000E4FCF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F196060A1E4F87B4000E4FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F196060D1E4F87B4000E4FCF /* WhereIsMyCar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhereIsMyCar.xcdatamodel; sourceTree = "<group>"; };
 		F196060F1E4F87B4000E4FCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		F19606281E4F87B4000E4FCF /* WhereIsMyCarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereIsMyCarUITests.swift; sourceTree = "<group>"; };
 		F196062A1E4F87B4000E4FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19606371E4F8ED5000E4FCF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F1E8E5D61E50D9A00059510D /* AddPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +108,10 @@
 		F19606041E4F87B4000E4FCF /* WhereIsMyCar */ = {
 			isa = PBXGroup;
 			children = (
-				F1115AC51E4F969500297951 /* LocationManager.swift */,
 				F19606051E4F87B4000E4FCF /* AppDelegate.swift */,
-				F19606071E4F87B4000E4FCF /* ViewController.swift */,
+				F19606071E4F87B4000E4FCF /* MainViewController.swift */,
 				F19606091E4F87B4000E4FCF /* Main.storyboard */,
+				F1E8E5D61E50D9A00059510D /* AddPositionViewController.swift */,
 				F196060F1E4F87B4000E4FCF /* Assets.xcassets */,
 				F19606111E4F87B4000E4FCF /* LaunchScreen.storyboard */,
 				F19606141E4F87B4000E4FCF /* Info.plist */,
@@ -281,10 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1115AC61E4F969500297951 /* LocationManager.swift in Sources */,
-				F19606081E4F87B4000E4FCF /* ViewController.swift in Sources */,
+				F19606081E4F87B4000E4FCF /* MainViewController.swift in Sources */,
 				F19606061E4F87B4000E4FCF /* AppDelegate.swift in Sources */,
 				F196060E1E4F87B4000E4FCF /* WhereIsMyCar.xcdatamodeld in Sources */,
+				F1E8E5D71E50D9A00059510D /* AddPositionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

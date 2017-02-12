@@ -9,17 +9,15 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class MainViewController: UIViewController, CLLocationManagerDelegate {
 
     var coreLocationManager = CLLocationManager()
-    
-    var locationManager:LocationManager!
     
     @IBOutlet weak var follow: UISwitch!
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var addLocationTrigger:Bool = false
+    var lastLocation:CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,32 +47,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             mapView.setRegion(region, animated: true)
             
         }
-        if addLocationTrigger{
-            addLocationPoint(location: locations.last!)
-            addLocationTrigger = false
-        }
         
         mapView.showsUserLocation = true
+        lastLocation = locations.last!
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error : " + error.localizedDescription)
     }
     
-    @IBAction func AddLocation(_ sender: UIButton) {
-        addLocationTrigger = true
-    }
-    
-    func addLocationPoint(location:CLLocation){
+    func loadLocationPoint(location:CLLocation){
         
         let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let annotation = MKPointAnnotation()
         annotation.coordinate = locationPinCoord
         
+        mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(annotation)
-        //mapView.showAnnotations([annotation], animated: true)
+        mapView.showAnnotations([annotation], animated: true)
         
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddPositionViewController{
+            (segue.destination as! AddPositionViewController).data = lastLocation
+            loadLocationPoint(location: lastLocation)
+        }
     }
 
     override func didReceiveMemoryWarning() {
