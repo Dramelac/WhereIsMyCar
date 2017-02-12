@@ -66,6 +66,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         mapView.addAnnotation(annotation)
         mapView.showAnnotations([annotation], animated: true)
         
+        follow.setOn(false, animated: false)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
