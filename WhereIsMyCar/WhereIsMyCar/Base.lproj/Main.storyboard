@@ -300,9 +300,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr9-75-lbZ">
-                                <rect key="frame" x="20" y="101" width="374" height="29"/>
+                                <rect key="frame" x="20" y="101" width="374" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="5nI-uK-SuH"/>
+                                    <constraint firstAttribute="height" constant="54" id="5nI-uK-SuH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -366,7 +366,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cr9-75-lbZ" firstAttribute="trailing" secondItem="TvS-p0-LrR" secondAttribute="trailing" id="AbY-a4-p9l"/>
-                            <constraint firstItem="ZY7-RX-PSC" firstAttribute="top" secondItem="cr9-75-lbZ" secondAttribute="bottom" constant="42" id="D0f-8X-zyW"/>
+                            <constraint firstItem="ZY7-RX-PSC" firstAttribute="top" secondItem="cr9-75-lbZ" secondAttribute="bottom" constant="17" id="D0f-8X-zyW"/>
                             <constraint firstItem="3he-Kw-EsR" firstAttribute="leading" secondItem="cr9-75-lbZ" secondAttribute="leading" id="EFi-MA-4jV"/>
                             <constraint firstItem="M26-HP-qgN" firstAttribute="top" secondItem="TvS-p0-LrR" secondAttribute="bottom" constant="6" id="FGE-gc-TfQ"/>
                             <constraint firstItem="3he-Kw-EsR" firstAttribute="leading" secondItem="3m3-0t-ln0" secondAttribute="leadingMargin" id="FGE-zp-5Vc"/>
