@@ -173,13 +173,10 @@
                                 <color key="textColor" red="1" green="0.36493781341618758" blue="0.2751616559535498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQp-qB-Add">
-                                <rect key="frame" x="20" y="84" width="374" height="32"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZkD-Vh-j5D">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.3115773334236443" green="0.68652849740932642" blue="0.34221394071740552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.97150259067357514" green="0.97150259067357514" blue="0.97150259067357514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -211,13 +208,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add position" id="S9l-34-bbI"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZkD-Vh-j5D" id="3wC-eH-VHR"/>
                         <outlet property="altitude" destination="w1Z-a0-tJ9" id="8yA-YD-88Z"/>
                         <outlet property="comment" destination="93d-Tk-00V" id="Qia-io-Skk"/>
                         <outlet property="errorMessage" destination="BaE-YV-kYe" id="aIa-lx-mTc"/>
                         <outlet property="latitude" destination="HY5-Re-HjN" id="Wui-LE-FqE"/>
                         <outlet property="longitude" destination="5xV-7G-Agh" id="q0Y-RH-O5G"/>
                         <outlet property="name" destination="mDT-Lb-iKN" id="k1v-jj-9br"/>
-                        <outlet property="successMessage" destination="mQp-qB-Add" id="gyh-k9-97Q"/>
+                        <outlet property="saveButton" destination="NUw-13-9tw" id="NbT-MY-eWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1z-Fa-OKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
