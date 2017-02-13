@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailsViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var comment: UILabel!
     @IBOutlet weak var name: UILabel!
     
+    var mapView: MKMapView!
     
     var data:Position?
     override func viewDidLoad() {
@@ -33,10 +35,24 @@ class DetailsViewController: UIViewController {
     
     @IBAction func goAction(_ sender: Any) {
         
+        loadLocationPoint(location: data!)
+        
         guard self.navigationController?.popToRootViewController(animated: true) != nil else {
             self.dismiss(animated: true, completion: nil)
             return
         }
+    }
+    
+    func loadLocationPoint(location:Position){
+        
+        let locationPinCoord = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locationPinCoord
+        
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(annotation)
+        mapView.showAnnotations([annotation], animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {

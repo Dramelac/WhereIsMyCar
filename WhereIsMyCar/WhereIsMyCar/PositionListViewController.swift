@@ -19,6 +19,7 @@ class PositionListViewController: UIViewController, UITableViewDelegate, UITable
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var posSelected: Position?
+    var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +91,7 @@ class PositionListViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is DetailsViewController{
             (segue.destination as! DetailsViewController).data = posSelected
+            (segue.destination as! DetailsViewController).mapView  = mapView
         }
     }
     

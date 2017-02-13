@@ -56,24 +56,11 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         print("Error : " + error.localizedDescription)
     }
     
-    func loadLocationPoint(location:CLLocation){
-        
-        let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = locationPinCoord
-        
-        mapView.removeAnnotations(mapView.annotations)
-        mapView.addAnnotation(annotation)
-        mapView.showAnnotations([annotation], animated: true)
-        
-        follow.setOn(false, animated: false)
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is AddPositionViewController{
             (segue.destination as! AddPositionViewController).data = lastLocation
-            loadLocationPoint(location: lastLocation)
+        } else if segue.destination is PositionListViewController{
+                (segue.destination as! PositionListViewController).mapView = mapView
         }
     }
 
