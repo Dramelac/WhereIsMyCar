@@ -39,6 +39,18 @@ class PositionListViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    func clearData(object: Position){
+        let context = appDelegate.persistentContainer.viewContext
+        
+        context.delete(object)
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,6 +69,14 @@ class PositionListViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            clearData(object: positionContainer[indexPath.row])
+            positionContainer.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
     }
     
     
