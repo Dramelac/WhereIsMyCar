@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10F21F81E51F06800430AB4 /* PositionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F21F71E51F06800430AB4 /* PositionListViewController.swift */; };
 		F1115AC81E4FC4A000297951 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1115AC71E4FC4A000297951 /* CoreLocation.framework */; };
 		F19606061E4F87B4000E4FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606051E4F87B4000E4FCF /* AppDelegate.swift */; };
 		F19606081E4F87B4000E4FCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606071E4F87B4000E4FCF /* MainViewController.swift */; };
@@ -18,7 +19,6 @@
 		F19606291E4F87B4000E4FCF /* WhereIsMyCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19606281E4F87B4000E4FCF /* WhereIsMyCarUITests.swift */; };
 		F19606381E4F8ED5000E4FCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19606371E4F8ED5000E4FCF /* MapKit.framework */; };
 		F1E8E5D71E50D9A00059510D /* AddPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8E5D61E50D9A00059510D /* AddPositionViewController.swift */; };
-		F1E8E5DB1E51058B0059510D /* PositionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8E5DA1E51058B0059510D /* PositionListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F10F21F71E51F06800430AB4 /* PositionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionListViewController.swift; sourceTree = "<group>"; };
 		F1115AC71E4FC4A000297951 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F19606021E4F87B4000E4FCF /* WhereIsMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19606051E4F87B4000E4FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		F196062A1E4F87B4000E4FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19606371E4F8ED5000E4FCF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F1E8E5D61E50D9A00059510D /* AddPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPositionViewController.swift; sourceTree = "<group>"; };
-		F1E8E5DA1E51058B0059510D /* PositionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositionListViewController.swift; path = ../PositionListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				F19606091E4F87B4000E4FCF /* Main.storyboard */,
 				F19606071E4F87B4000E4FCF /* MainViewController.swift */,
 				F1E8E5D61E50D9A00059510D /* AddPositionViewController.swift */,
-				F1E8E5DA1E51058B0059510D /* PositionListViewController.swift */,
+				F10F21F71E51F06800430AB4 /* PositionListViewController.swift */,
 				F196060F1E4F87B4000E4FCF /* Assets.xcassets */,
 				F19606111E4F87B4000E4FCF /* LaunchScreen.storyboard */,
 				F19606141E4F87B4000E4FCF /* Info.plist */,
@@ -286,7 +286,7 @@
 			files = (
 				F19606081E4F87B4000E4FCF /* MainViewController.swift in Sources */,
 				F19606061E4F87B4000E4FCF /* AppDelegate.swift in Sources */,
-				F1E8E5DB1E51058B0059510D /* PositionListViewController.swift in Sources */,
+				F10F21F81E51F06800430AB4 /* PositionListViewController.swift in Sources */,
 				F196060E1E4F87B4000E4FCF /* WhereIsMyCar.xcdatamodeld in Sources */,
 				F1E8E5D71E50D9A00059510D /* AddPositionViewController.swift in Sources */,
 			);

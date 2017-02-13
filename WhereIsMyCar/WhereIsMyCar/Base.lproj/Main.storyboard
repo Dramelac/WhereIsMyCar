@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1054" y="-68"/>
+            <point key="canvasLocation" x="-1116" y="-68"/>
         </scene>
         <!--Add position-->
         <scene sceneID="zb5-Sv-f7c">
@@ -164,9 +164,22 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="SavePosition:" destination="ei9-F7-D9a" eventType="touchUpInside" id="QSQ-23-qif"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="hul-da-Ivk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaE-YV-kYe">
+                                <rect key="frame" x="20" y="84" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.36493781341618758" blue="0.2751616559535498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQp-qB-Add">
+                                <rect key="frame" x="20" y="84" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.3115773334236443" green="0.68652849740932642" blue="0.34221394071740552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97150259067357514" green="0.97150259067357514" blue="0.97150259067357514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -200,14 +213,16 @@
                     <connections>
                         <outlet property="altitude" destination="w1Z-a0-tJ9" id="8yA-YD-88Z"/>
                         <outlet property="comment" destination="93d-Tk-00V" id="Qia-io-Skk"/>
+                        <outlet property="errorMessage" destination="BaE-YV-kYe" id="aIa-lx-mTc"/>
                         <outlet property="latitude" destination="HY5-Re-HjN" id="Wui-LE-FqE"/>
                         <outlet property="longitude" destination="5xV-7G-Agh" id="q0Y-RH-O5G"/>
                         <outlet property="name" destination="mDT-Lb-iKN" id="k1v-jj-9br"/>
+                        <outlet property="successMessage" destination="mQp-qB-Add" id="gyh-k9-97Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1z-Fa-OKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="-67"/>
+            <point key="canvasLocation" x="-113.04347826086958" y="-68.478260869565219"/>
         </scene>
         <!--Positions list-->
         <scene sceneID="NjH-xl-LUF">
@@ -230,7 +245,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UUs-ky-G9s" id="zLw-AE-yFw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -248,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HT-l0-1bV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281" y="676"/>
+            <point key="canvasLocation" x="-600" y="681"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GSc-QV-nlp">
@@ -266,10 +281,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjW-kh-HFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1972" y="-68"/>
+            <point key="canvasLocation" x="-2078" y="-68"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hul-da-Ivk"/>
-    </inferredMetricsTieBreakers>
 </document>

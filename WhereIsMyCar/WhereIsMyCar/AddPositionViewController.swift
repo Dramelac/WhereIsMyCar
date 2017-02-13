@@ -16,6 +16,8 @@ class AddPositionViewController: UIViewController {
     @IBOutlet weak var altitude: UILabel!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var comment: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var successMessage: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -31,6 +33,12 @@ class AddPositionViewController: UIViewController {
     }
     
     @IBAction func SavePosition(_ sender: Any) {
+        
+        if (self.name.text?.isEmpty)!{
+            errorMessage.text = "Name is empty"
+            return
+        }
+        
         appDelegate.persistentContainer.performBackgroundTask{ (backgroundContext) in
             let positionEntity = Position(context: backgroundContext)
             
@@ -42,8 +50,11 @@ class AddPositionViewController: UIViewController {
             
             do {
                 try backgroundContext.save()
+                self.errorMessage.text = ""
+                self.successMessage.text = self.name.text! + " successfully added"
             } catch {
                 print(error.localizedDescription)
+                self.errorMessage.text = "Unknown error"
             }
             
         }
