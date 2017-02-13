@@ -18,6 +18,8 @@ class PositionListViewController: UIViewController, UITableViewDelegate, UITable
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    var posSelected: Position?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -76,6 +78,18 @@ class PositionListViewController: UIViewController, UITableViewDelegate, UITable
             clearData(object: positionContainer[indexPath.row])
             positionContainer.remove(at: indexPath.row)
             self.tableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.posSelected = positionContainer[indexPath.row]
+        performSegue(withIdentifier: "detailsView", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is DetailsViewController{
+            (segue.destination as! DetailsViewController).data = posSelected
         }
     }
     

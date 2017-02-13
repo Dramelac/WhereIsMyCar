@@ -29,7 +29,7 @@ class AddPositionViewController: UIViewController {
         if data != nil{
             latitude.text = String(describing: data!.coordinate.latitude)
             longitude.text = String(describing: data!.coordinate.longitude)
-            altitude.text = String(describing: data!.altitude)
+            altitude.text = String(describing: data!.altitude) + " meters"
         }
         //activityIndicator.transform = CGAffineTransformMakeScale(0.75, 0.75);
         activityIndicator.isHidden = true
